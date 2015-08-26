@@ -46,7 +46,7 @@ a {
 .header-wrapper {
     margin: 25px auto;
     border-top-width: 1px;
-    padding: 15px 0;
+    padding: 0 0 15px;
 }
 
 .footer-wrapper {
@@ -78,7 +78,7 @@ a {
     border-radius: 50%;
     font-size: 65px; // giant initial
     font-family: $brand-face;
-    margin-top: -30px;
+    margin-top: -15px;
     font-weight: normal;
     @include vendor(transition, opacity 500ms linear);
     line-height: 100%;
@@ -95,11 +95,12 @@ a {
 .nav--top {
     li {
         padding: 2px 5px;
-        border: 1px solid #EEE;
-        border-radius: 5px;
-        font-size: 1.1em;
+        border-bottom: 1px solid #EEE;
+        font-size: 15px;
         margin: 0 18px;
-        &:hover {
+        padding: 20px 8px;
+        text-transform: uppercase;
+        &:hover, &.current-menu-item {
             background-color: #EEE;
         }
         a {

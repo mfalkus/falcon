@@ -8,7 +8,7 @@
 	<footer class="footer-wrapper" role="contentinfo">
     <p class="micro">
         <?php bloginfo('name') ?> &dash; <?php bloginfo('description'); ?><br />
-        <a href="#">I would like to get this WordPress theme</a>
+        <a href="#">Get this theme on <em>GitHub</em></a>
     </p>
 	</footer>
 </div><!-- total-warpper -->

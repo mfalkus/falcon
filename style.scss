@@ -99,8 +99,10 @@ a {
 .nav--top {
     li {
         padding: 2px 5px;
-        background-color: #FAFAFA;
-        margin: 0 3px;
+        border: 1px solid #EEE;
+        border-radius: 5px;
+        font-size: 1.1em;
+        margin: 0 18px;
         &:hover {
             background-color: #EEE;
         }
@@ -108,5 +110,13 @@ a {
             text-decoration: none;
             color: maroon;
         }
+        font-family: $brand-face;
     }
+}
+
+.nav--primary li {
+    margin-right: 0;
+}
+.nav--external li {
+    margin-left: 0;
 }

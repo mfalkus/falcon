@@ -27,7 +27,9 @@
             ) ); ?>
         </div><!--
      --><div class="grid__item one-fifth icon-wrapper">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <h1 class="site-icon"><?php echo strtolower(substr(get_bloginfo('name'),0,1)); ?></h1>
+            </a>
         </div><!--
      --><div class="grid__item two-fifths external-wrapper">
             <?php wp_nav_menu( array(

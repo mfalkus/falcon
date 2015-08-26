@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+
+/*------------------------------------*\
+    IMPORTS AND SETUP
+\*------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+@import "css/vars";
+@import "css/inuit.css/inuit";
+
+/*------------------------------------*\
+    GENERAL
+\*------------------------------------*/
+* {
+    color: #333;
+}
+a {
+    color: #000;
+    &:hover {
+        color: maroon;
+    }
+}
+
+/*------------------------------------*\
+    CONTAINERS
+\*------------------------------------*/
+.site-content {
+    width: 100%;
+    max-width: $max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------------*\
+    HEADER FOOTER
+\*------------------------------------*/
+.header-wrapper,
+.footer-wrapper {
+    @extend .site-content;
+    border: 1px solid #EEE;
+    border-width: 0;
+}
+
+.header-wrapper {
+    margin: 25px auto;
+    border-top-width: 1px;
+    padding: 15px 0;
+}
+
+.footer-wrapper {
+    margin: 25px auto;
+    border-top-width: 1px;
+    text-align: center;
+}
+.primary-wrapper {
+    text-align: right;
+}
+.icon-wrapper {
+    text-align: center;
+}
+.external-wrapper {
+    text-align: left;
+}
+
+/*------------------------------------*\
+    SITE ICON
+\*------------------------------------*/
+.site-icon {
+    display: inline-block;
+    background-color: maroon;
+    @include vendor(background, linear-gradient(#D00303, maroon));
+    color: white;
+    border: 1px #888 solid;
+
+    padding: 15px 33px 5px;
+    border-radius: 50%;
+    font-size: 65px; // giant initial
+    font-family: $brand-face;
+    margin-top: -30px;
+    font-weight: normal;
+    line-height: 100%;
+
+    &:hover {
+        @include vendor(animation, spin 1s linear infinite);
+        @include vendor(animation-direction, alternate);
+    }
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(6deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(6deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(6deg); transform:rotate(6deg); } }
+
+
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+.nav--top {
+    li {
+        padding: 2px 5px;
+        background-color: #FAFAFA;
+        margin: 0 3px;
+        &:hover {
+            background-color: #EEE;
+        }
+        a {
+            text-decoration: none;
+            color: maroon;
+        }
+    }
+}

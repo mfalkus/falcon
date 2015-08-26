@@ -80,17 +80,13 @@ a {
     font-family: $brand-face;
     margin-top: -30px;
     font-weight: normal;
+    @include vendor(transition, opacity 500ms linear);
     line-height: 100%;
 
     &:hover {
-        @include vendor(animation, spin 1s linear infinite);
-        @include vendor(animation-direction, alternate);
+        opacity: 0.8;
     }
 }
-
-@-moz-keyframes spin { 100% { -moz-transform: rotate(6deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(6deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(6deg); transform:rotate(6deg); } }
 
 
 /*------------------------------------*\

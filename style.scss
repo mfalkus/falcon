@@ -156,10 +156,12 @@ ul {
         @extend .nav--stacked;
         margin-bottom: 0;
         li {
-            padding: 8px;
             border-top: #FFF 1px solid;
             &:hover {
                 background: #FAFAFA;
+            }
+            a {
+                padding: 8px;
             }
         }
     }

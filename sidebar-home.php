@@ -6,6 +6,6 @@
  */
 ?>
 
-<div class="widget-area">
+<div class="widget-area widget-area--home">
     <?php dynamic_sidebar( 'home-breakout-1' ); ?>
 </div><!-- #primary .widget-area -->

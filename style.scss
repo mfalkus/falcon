@@ -22,6 +22,14 @@ a {
         color: maroon;
     }
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: $brand-face;
+    font-weight: normal;
+}
+ul {
+    margin-left: 3px;
+    list-style-position: inside;
+}
 
 /*------------------------------------*\
     CONTAINERS
@@ -116,4 +124,52 @@ a {
 }
 .nav--external li {
     margin-left: 0;
+}
+
+/*------------------------------------*\
+    WIDGET
+\*------------------------------------*/
+// These styles may become home page specific... undecided at present
+.widget {
+    > * {
+        padding: 8px 20px 7px;
+    }
+    border-radius: 5px;
+    background: #EEE;
+    overflow: hidden;
+    margin-bottom: $base-line-height;
+}
+.widget-title {
+    background: maroon;
+    color: #FFF;
+    border-bottom: 1px #CCC solid;
+}
+
+.widget_nav_menu {
+    .widget-title {
+        margin-bottom: 0;
+    }
+    div {
+        padding: 0;
+    }
+    .menu {
+        @extend .nav;
+        @extend .nav--stacked;
+        margin-bottom: 0;
+        li {
+            padding: 8px;
+            border-top: #FFF 1px solid;
+            &:hover {
+                background: #FAFAFA;
+            }
+        }
+    }
+}
+
+/*------------------------------------*\
+    PAGE AND POST
+\*------------------------------------*/
+.lone-half {
+    max-width: 600px;
+    margin: 0 auto;
 }

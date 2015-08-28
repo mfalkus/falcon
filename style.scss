@@ -102,16 +102,15 @@ ul {
 \*------------------------------------*/
 .nav--top {
     li {
-        padding: 2px 5px;
         border-bottom: 1px solid #EEE;
         font-size: 15px;
         margin: 0 18px;
-        padding: 20px 8px;
         text-transform: uppercase;
         &:hover, &.current-menu-item {
             background-color: #EEE;
         }
         a {
+            padding: 20px 8px;
             text-decoration: none;
             color: maroon;
         }

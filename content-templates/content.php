@@ -26,5 +26,18 @@
         ?>
     </div>
 
+    <footer class="entry-footer">
+        <div class="grid meta-row">
+        <div class="grid__item one-half category-row">
+            <span>Category:</span>
+            <?php echo get_the_category_list(' '); ?>
+        </div><!--
+     --><div class="grid__item one-half tag-row">
+            <span>Tags:</span>
+            <?php the_tags('', ' '); ?>
+        </div>
+        </div>
+    </footer>
+
     <!-- some neat post splitter here? -->
 </article>

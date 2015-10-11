@@ -7,14 +7,15 @@
 
 get_header(); ?>
 
-	<div class="content-wrapper">
-		<main class="main-site" role="main">
+    <div class="content-wrapper">
+        <main class="main-site" role="main">
 
-		<?php if ( have_posts() ) : ?>
-        <!-- coming soon -->
-		<?php endif; ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+            <?php get_template_part( 'content-templates/content', get_post_format() ); ?>
+        <?php endwhile; ?>
 
-		</main>
-	</div>
+        </main>
+        <?php the_posts_navigation(); ?>
+    </div>
 
 <?php get_footer(); ?>

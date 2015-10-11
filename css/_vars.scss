@@ -32,7 +32,7 @@ $use-pagination:    false;
 $use-breadcrumb:    false;
 $use-media:         false;
 $use-marginalia:    true;
-$use-island:        false;
+$use-island:        true;
 $use-block-list:    false;
 $use-matrix:        false;
 $use-split:         false;
@@ -46,7 +46,7 @@ $use-beautons:      false;
 $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
-$use-greybox:       false;
+$use-greybox:       true;
 
 
 
@@ -70,4 +70,7 @@ $base-line-height:  22px;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
- $max-content: 1000px;
+ $max-content:  1000px;
+
+ $falcon-blue:  #0276A5;
+ $falcon-red:   #AF0303;

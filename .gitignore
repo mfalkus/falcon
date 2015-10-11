@@ -2,3 +2,6 @@
 *.css
 *.css.map
 .sass-cache
+
+# Ignore any vim swap files
+*.sw*

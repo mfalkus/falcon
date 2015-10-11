@@ -19,7 +19,7 @@
 a {
     color: #000;
     &:hover {
-        color: maroon;
+        color: $falcon-red;
     }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +29,18 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     margin-left: 3px;
     list-style-position: inside;
+}
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: $falcon-red;
+    background-color: #D4F3FF;
+    border-radius: 4px;
+}
+
+.islet {
+    background-color: $falcon-blue;
+    color: #F2F2F2;
 }
 
 /*------------------------------------*\
@@ -54,7 +66,6 @@ ul {
 .header-wrapper {
     margin: 25px auto;
     border-top-width: 1px;
-    padding: 0 0 15px;
 }
 
 .footer-wrapper {
@@ -77,7 +88,7 @@ ul {
 \*------------------------------------*/
 .site-icon {
     display: inline-block;
-    background-color: maroon;
+    background-color: $falcon-red;
     @include vendor(background, linear-gradient(#D00303, maroon));
     color: white;
     border: 1px #888 solid;
@@ -106,13 +117,16 @@ ul {
         font-size: 15px;
         margin: 0 18px;
         text-transform: uppercase;
-        &:hover, &.current-menu-item {
+        &:hover, &.current-menu-item, &.current_page_parent {
             background-color: #EEE;
+        }
+        &:hover {
+            border-bottom: 1px solid $falcon-blue;
         }
         a {
             padding: 20px 8px;
             text-decoration: none;
-            color: maroon;
+            color: $falcon-red;
         }
         font-family: $brand-face;
     }
@@ -139,19 +153,27 @@ ul {
     margin-bottom: $base-line-height;
 }
 .widget-title {
-    background: maroon;
-    color: #FFF;
+    background: url('./img/washi.png') repeat;
+    color: #000;
     border-bottom: 1px #CCC solid;
 }
 
 .widget_nav_menu {
     .widget-title {
+        background: url('./img/washi-blue.png') repeat;
+        color: #FFF;
+    }
+}
+
+.widget_recent_entries,
+.widget_nav_menu {
+    .widget-title {
         margin-bottom: 0;
     }
-    div {
+    div, ul {
         padding: 0;
     }
-    .menu {
+    ul {
         @extend .nav;
         @extend .nav--stacked;
         margin-bottom: 0;
@@ -161,7 +183,8 @@ ul {
                 background: #FAFAFA;
             }
             a {
-                padding: 8px;
+                padding: 8px 20px;
+                text-decoration: none;
             }
         }
     }
@@ -170,7 +193,162 @@ ul {
 /*------------------------------------*\
     PAGE AND POST
 \*------------------------------------*/
-.lone-half {
+.lone-content { // i.e. no sidebar in site
     max-width: 600px;
     margin: 0 auto;
 }
+
+/*------------------------------------*\
+    WORDPRESS SPECIFIC
+\*------------------------------------*/
+.entry-header {
+    position: relative;
+}
+.entry-title {
+    a {
+        text-decoration: none;
+        border-bottom: 1px dotted transparent;
+        &:hover {
+            border-bottom: 1px dotted #000;
+        }
+    }
+}
+.entry-meta {
+    position: absolute;
+    right: 103%;
+    top: 0;
+    width: 58px;
+    border-right: 1px dotted #000;
+    padding-right: 8px;
+    text-align: center;
+    a {
+        text-decoration: none;
+    }
+}
+.entry-content {
+    a {
+        color: $falcon-red;
+        &:hover {
+            color: $falcon-blue;
+        }
+    }
+}
+
+.posts-navigation {
+    h2 {
+        display: none;
+    }
+    text-align: center;
+    border-top: 1px solid #EEE;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+

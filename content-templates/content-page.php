@@ -7,7 +7,7 @@
 
 ?>
 
-<article <?php post_class('lone-half'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('lone-content'); ?> id="post-<?php the_ID(); ?>">
     <?php // the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	<div class="entry-content">

@@ -37,6 +37,9 @@ code {
     background-color: #D4F3FF;
     border-radius: 4px;
 }
+img {
+    max-width: 100%;
+}
 
 .islet {
     background-color: $falcon-blue;
@@ -51,10 +54,16 @@ code {
     max-width: $max-content;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 .meta-row {
     padding-top: 12px;
     border-top: 1px solid $falcon-blue;
+}
+@media (max-width: $desk-start) {
+    .one-half {
+        width: 100%;
+    }
 }
 
 /*------------------------------------*\
@@ -87,6 +96,12 @@ code {
     text-align: left;
 }
 
+@media (max-width: $desk-start) {
+    .header-wrapper {
+        margin: 15px auto;
+    }
+}
+
 /*------------------------------------*\
     SITE ICON
 \*------------------------------------*/
@@ -108,6 +123,12 @@ code {
 
     &:hover {
         opacity: 0.8;
+    }
+}
+@media (max-width: $desk-start) {
+    .site-icon {
+        padding: 15px 27px 0;
+        font-size: 50px;
     }
 }
 
@@ -133,6 +154,17 @@ code {
             color: $falcon-red;
         }
         font-family: $brand-face;
+    }
+}
+@media (max-width: $desk-start) {
+    /* à la .nav--stacked from inuit.css */
+    .nav--top > li{
+        text-align: center;
+        display:list-item;
+        > a {
+            display:block;
+            padding: 10px 8px;
+        }
     }
 }
 
@@ -199,7 +231,7 @@ code {
 \*------------------------------------*/
 .lone-content { // i.e. no sidebar in site
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto $base-line-height;
 }
 
 /*------------------------------------*\

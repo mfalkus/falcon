@@ -41,11 +41,6 @@ img {
     max-width: 100%;
 }
 
-.islet {
-    background-color: $falcon-blue;
-    color: #F2F2F2;
-}
-
 /*------------------------------------*\
     CONTAINERS
 \*------------------------------------*/
@@ -396,5 +391,20 @@ a img.aligncenter {
     top: 5px;
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
+}
+
+
+/*------------------------------------*\
+    ISLET
+\*------------------------------------*/
+.islet {
+    background-color: $falcon-blue;
+    color: #F2F2F2;
+    a {
+        color: #DDD;
+        &:hover {
+            color: #FFF;
+        }
+    }
 }
 

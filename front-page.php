@@ -9,7 +9,10 @@ get_header(); ?>
 
 	<div class="content-wrapper">
         <div class="grid">
-        <div class="grid__item one-half">
+        <div class="grid__item one-whole">
+            <div class="floating-blog-preview">
+                <?php get_sidebar('home'); ?>
+            </div>
             <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <div id="content" role="main">
@@ -21,10 +24,6 @@ get_header(); ?>
                 </div><!-- #content -->
             <?php endwhile; // end of the loop. ?>
             <?php endif; ?>
-        </div><!--
-     --><div class="grid__item one-half">
-            <?php get_sidebar('home'); ?>
-        </div>
         </div>
 	</div>
 

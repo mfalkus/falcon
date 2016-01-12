@@ -120,10 +120,17 @@ img {
         opacity: 0.8;
     }
 }
+$sml-icon-width: 70px;
 @media (max-width: $desk-start) {
     .site-icon {
-        padding: 15px 27px 0;
         font-size: 50px;
+        padding: 10px 0 5px;
+        width: $sml-icon-width;
+
+        // define some solid absolutes to ensure correct centering on tiny viewports
+        position: absolute;
+        left: 50%;
+        margin-left: -1 * ($sml-icon-width / 2);
     }
 }
 

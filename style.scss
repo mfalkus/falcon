@@ -423,6 +423,11 @@ figure.wp-caption {
     figcaption {
         color: #EEE;
         font-size: 0.8em;
+        padding-top: 10px; // evens out with padding on container
+    }
+    img {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

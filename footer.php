@@ -8,7 +8,7 @@
 	<footer class="footer-wrapper" role="contentinfo">
     <p class="micro">
         <?php bloginfo('name') ?> &dash; <?php bloginfo('description'); ?><br />
-        <a href="#">Get this theme on <em>GitHub</em></a>
+        <a href="https://github.com/mfalkus/falcon">Get this theme on GitHub</a>
     </p>
 	</footer>
 </div><!-- total-warpper -->

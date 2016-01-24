@@ -27,8 +27,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 ul {
-    margin-left: 3px;
-    list-style-position: inside;
+    margin-left: 17px;
+    list-style-position: outside;
 }
 code {
     padding: 2px 4px;
@@ -407,6 +407,9 @@ a img.aligncenter {
 .islet {
     background-color: $falcon-blue;
     color: #F2F2F2;
+    > * {
+        color: #F2F2F2;
+    }
     a {
         color: #DDD;
         &:hover {

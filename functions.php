@@ -38,6 +38,12 @@ function falcon_setup() {
         'default-color' => 'ffffff',
         'default-image' => '',
     ) ) );
+
+    /*
+     * Add support for styling quotes in a cool way
+     * Other post formats listed: https://codex.wordpress.org/Post_Formats
+     */
+    add_theme_support( 'post-formats', array('quote') );
 }
 add_action( 'after_setup_theme', 'falcon_setup' );
 

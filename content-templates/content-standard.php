@@ -1,10 +1,10 @@
 <?php
 /**
- * Template part for displaying single posts.
+ * Template part for displaying posts (single and preview lists)
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Falcon-scaffold
+ * @package Falcon
  */
 
 ?>
@@ -20,20 +20,13 @@
 
     <div class="entry-content">
     <?php
-        // for post display, just a preview unless single
+        // for post display, just a preview unless single post display
         if (is_single()) {
             the_content();
         } else {
             the_excerpt();
         }
     ?>
-
-        <?php
-            wp_link_pages( array(
-                'before' => '<div class="pagination-wrapper">',
-                'after'  => '</div>',
-            ) );
-        ?>
     </div>
 
     <footer class="entry-footer">

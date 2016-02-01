@@ -50,4 +50,5 @@
         </div>
         </div>
     </footer>
+</article>
 

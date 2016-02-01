@@ -42,7 +42,7 @@ $use-flyout:        false;
 $use-arrows:        false;
 $use-sprite:        false;
 $use-icon-text:     false;
-$use-beautons:      false;
+$use-beautons:      true;
 $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
@@ -73,7 +73,9 @@ $desk-wide-start:   1200px;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
- $max-content:  1000px;
+$max-content:       1000px;
+$tight-content:     600px;
 
- $falcon-blue:  #0276A5;
- $falcon-red:   #AF0303;
+$falcon-blue:       #0276A5;
+$falcon-blue-dim:   #015475;
+$falcon-red:        #AF0303;

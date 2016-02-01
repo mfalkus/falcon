@@ -177,6 +177,33 @@ $sml-icon-width: 70px;
     margin-left: 0;
 }
 
+// sub-nav, pagination
+.falcon-pagination-wrapper {
+    max-width: $tight-content;
+    text-align: center;
+    margin: 35px auto;
+    a {
+        @extend .btn;
+        background: $falcon-blue;
+        color: #EFEFEF;
+        &:hover {
+            color: #FFF;
+            background: $falcon-blue-dim;
+        }
+    }
+    .prev, .next {
+        @extend .btn--small;
+    }
+    .current {
+        @extend .btn;
+        @extend .btn--inactive;
+        &, &:hover {
+            background: #DDD;
+            color: #000;
+        }
+    }
+}
+
 /*------------------------------------*\
     WIDGET
 \*------------------------------------*/
@@ -232,7 +259,7 @@ $sml-icon-width: 70px;
     PAGE AND POST
 \*------------------------------------*/
 .lone-content { // i.e. no sidebar in site
-    max-width: 600px;
+    max-width: $tight-content;
     margin: 0 auto $base-line-height;
 }
 

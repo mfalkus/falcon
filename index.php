@@ -17,8 +17,8 @@ get_header(); ?>
             ); ?>
         <?php endwhile; ?>
 
+        <?php echo falcon_pagination() ?>
         </main>
-        <?php the_posts_navigation(); ?>
     </div>
 
 <?php get_footer(); ?>

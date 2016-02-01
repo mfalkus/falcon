@@ -179,9 +179,10 @@ $sml-icon-width: 70px;
 
 // sub-nav, pagination
 .falcon-pagination-wrapper {
-    max-width: $tight-content;
+    @extend .lone-content;
     text-align: center;
-    margin: 35px auto;
+    margin-left: 35px;
+    margin-right: 35px;
     a {
         @extend .btn;
         background: $falcon-blue;
@@ -259,8 +260,8 @@ $sml-icon-width: 70px;
     PAGE AND POST
 \*------------------------------------*/
 .lone-content { // i.e. no sidebar in site
-    max-width: $tight-content;
     margin: 0 auto $base-line-height;
+    padding: 0 15%;
 }
 
 /*------------------------------------*\
@@ -320,8 +321,28 @@ $sml-icon-width: 70px;
 }
 
 .format-quote {
+    background: #EFEFEF;
+    padding-top: 20px;
+    padding-bottom: 20px;
     blockquote {
         font-size: 1.2em;
+        position: relative;
+        text-indent: 0;
+        p {
+            margin-left: 15px;
+            width: 90%;
+        }
+        p:before {
+            content: '“';
+            position: absolute;
+            font-size: 100px;
+            left: -40px;
+            top: -40px;
+            color: $falcon-red;
+        }
+        p:after {
+            content: none;
+        }
     }
 }
 

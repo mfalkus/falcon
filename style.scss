@@ -320,28 +320,42 @@ $sml-icon-width: 70px;
     }
 }
 
+blockquote {
+    font-size: 1.15em;
+    position: relative;
+    text-indent: 0;
+    p {
+        margin-left: 15px;
+        width: 90%;
+    }
+    p:before {
+        content: '“';
+        position: absolute;
+        font-size: 70px;
+        left: -25px;
+        top: -25px;
+        color: $falcon-red;
+    }
+    p:after {
+        content: none;
+    }
+    ul {
+        list-style-position: inside;
+    }
+}
+
 .format-quote {
     background: #EFEFEF;
     padding-top: 20px;
     padding-bottom: 20px;
     blockquote {
         font-size: 1.2em;
-        position: relative;
-        text-indent: 0;
-        p {
-            margin-left: 15px;
-            width: 90%;
-        }
         p:before {
             content: '“';
             position: absolute;
             font-size: 100px;
             left: -40px;
             top: -40px;
-            color: $falcon-red;
-        }
-        p:after {
-            content: none;
         }
     }
 }

@@ -60,6 +60,9 @@ img {
     .one-half {
         width: 100%;
     }
+    .site-content {
+        padding: 0 2%;
+    }
 }
 
 /*------------------------------------*\
@@ -214,7 +217,7 @@ $sml-icon-width: 70px;
     > * {
         padding: 8px 20px 7px;
     }
-    border-radius: 5px;
+    border-radius: 8px;
     background: #EEE;
     overflow: hidden;
     margin-bottom: $base-line-height;
@@ -223,6 +226,7 @@ $sml-icon-width: 70px;
     background: url('./img/washi.png') repeat;
     color: #000;
     border-bottom: 1px #CCC solid;
+    font-weight: normal;
 }
 
 .widget_nav_menu {
@@ -263,6 +267,11 @@ $sml-icon-width: 70px;
 .lone-content { // i.e. no sidebar in site
     margin: 0 auto $base-line-height;
     padding: 0 15%;
+}
+@media (max-width: $desk-start) {
+    .lone-content { // i.e. no sidebar in site
+        padding: 0 2%;
+    }
 }
 
 /*------------------------------------*\

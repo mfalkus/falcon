@@ -24,7 +24,8 @@ a {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: $brand-face;
-    font-weight: normal;
+    line-height: 110%;
+    margin-bottom: 16px;
 }
 ul {
     margin-left: 17px;
@@ -325,14 +326,14 @@ blockquote {
     position: relative;
     text-indent: 0;
     p {
-        margin-left: 15px;
         width: 90%;
+        font-style: italic;
     }
     p:before {
         content: '“';
         position: absolute;
         font-size: 70px;
-        left: -25px;
+        left: -40px;
         top: -25px;
         color: $falcon-red;
     }

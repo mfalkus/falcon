@@ -512,20 +512,3 @@ figure.wp-caption {
         margin-right: auto;
     }
 }
-
-
-/*------------------------------------*\
-    HOME-SPECIFIC
-\*------------------------------------*/
-.floating-blog-preview {
-    float: right;
-    width: 45%;
-    margin: 0 0 0 25px;
-}
-@media (max-width: $lap-start) {
-    .floating-blog-preview {
-        float: none;
-        margin: 0 0 20px;
-        width: 100%;
-    }
-}

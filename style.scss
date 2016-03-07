@@ -217,7 +217,6 @@ $sml-icon-width: 70px;
     > * {
         padding: 8px 20px 7px;
     }
-    border-radius: 8px;
     background: #EEE;
     overflow: hidden;
     margin-bottom: $base-line-height;
@@ -258,6 +257,18 @@ $sml-icon-width: 70px;
                 text-decoration: none;
             }
         }
+    }
+}
+.widget_image {
+    background: none;
+}
+.jetpack-image-container {
+    padding: 0;
+    .wp-caption {
+        max-width: 100%;
+    }
+    .wp-caption.alignnone {
+        margin: 0;
     }
 }
 

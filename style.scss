@@ -31,12 +31,17 @@ ul {
     margin-left: 17px;
     list-style-position: outside;
 }
-code {
-    padding: 2px 4px;
+code, pre {
     font-size: 90%;
-    color: $falcon-red;
     background-color: #D4F3FF;
     border-radius: 4px;
+}
+pre {
+    padding: 8px 12px;
+}
+code {
+    padding: 2px 4px;
+    color: $falcon-red;
 }
 img {
     max-width: 100%;

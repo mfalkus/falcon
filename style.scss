@@ -531,3 +531,15 @@ figure.wp-caption {
         margin-right: auto;
     }
 }
+
+/*------------------------------------*\
+    EXAMPLE-CODE
+\*------------------------------------*/
+.split-code {
+    td {
+        vertical-align: top;
+    }
+    .code-example {
+        padding-left: 0;
+    }
+}

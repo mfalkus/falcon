@@ -538,8 +538,12 @@ figure.wp-caption {
 .split-code {
     td {
         vertical-align: top;
+        padding-bottom: 0;
     }
     .code-example {
         padding-left: 0;
+        pre {
+            margin-bottom: 0;
+        }
     }
 }

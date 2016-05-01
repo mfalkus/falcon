@@ -92,6 +92,15 @@ function falcon_scripts() {
 add_action( 'wp_enqueue_scripts', 'falcon_scripts' );
 
 
+/**
+ * Set post mail handling (we use JetPack)
+ *
+ * Further examples can be found:
+ * https://jetpack.com/support/subscriptions/#customize-confirmation
+ */
+add_filter( 'jetpack_allow_per_post_subscriptions', '__return_true' ); // allow per post override
+
+
 function falcon_posted_on() {
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
     if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {

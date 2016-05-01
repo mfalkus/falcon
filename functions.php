@@ -18,7 +18,7 @@ function falcon_setup() {
     add_theme_support( 'automatic-feed-links' );
 
     // Plan to add support for post thumbnails...
-    // add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
 
     // Header uses wp_nav_menu() at two points.
     register_nav_menus( array(

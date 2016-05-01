@@ -43,5 +43,9 @@
         </div>
         </div>
     </footer>
+
 </article>
 
+<?php if (is_single() && in_category('dev')) { ?>
+    <?php get_sidebar('dev'); ?>
+<?php } ?>
